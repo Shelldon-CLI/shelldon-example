@@ -1,0 +1,5 @@
+require 'shell'
+require 'commands'
+require 'opts'
+require 'config'
+require 'module'

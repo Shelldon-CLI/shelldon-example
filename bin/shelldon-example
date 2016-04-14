@@ -1,0 +1,22 @@
+require 'shelldon'
+require_relative '../lib/shelldon-example'
+
+Shelldon.shell :test do
+  command :superderp do
+    action { puts 'beh' }
+    help 'test'
+  end
+
+  config do
+    param :value do
+      type :string
+      default 'This is the default value!'
+    end
+  end
+
+  shell do
+    prompt 'shelldon> '
+  end
+end
+
+Shelldon.run(:test)
